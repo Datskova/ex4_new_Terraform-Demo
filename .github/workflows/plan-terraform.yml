@@ -36,7 +36,7 @@ jobs:
       run: terraform plan -out=terraform.plan
  
     - name: Upload Terraform Plan
-      users: actions/upload-artifact@3
+      uses: actions/upload-artifact@3
       with:
         name: terraform-plan
         path: terraform.plan
@@ -57,7 +57,7 @@ jobs:
       run: terraform init
 
     - name: Download Terraform Plan
-      user: actions/download-artifact@v3
+      uses: actions/download-artifact@v3
       with:
         name: terraform-plan
         path: .
