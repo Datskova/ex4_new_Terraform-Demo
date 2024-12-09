@@ -21,10 +21,10 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v4
 
-    - name: Azure login
-      uses: azure/login@v2
-      with:
-        creds: ${{ secrets.AZUR_CREDENTIALS}}
+ #   - name: Azure login
+  #    uses: azure/login@v2
+   #   with:
+    #    creds: ${{ secrets.AZUR_CREDENTIALS}}
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
